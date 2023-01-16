@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  chatgptapi:
+    image: chatgptapi
+    container_name: chatgptapi
+    build:
+      context: ./
+    # command: python3 -m flask run --host=0.0.0.0
+    ports:
+      - 5000:5000
+    # volumes:
+    #   - .:/app
+    # restart: always
+    # network_mode: traefik
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.chatgptapi.rule=host(`chatgptapi.agentzhao.me`)" # && pathprefix(`/ws/`)"
+    #   - "traefik.http.routers.chatgptapi.tls=true"
+    #   - "traefik.http.routers.chatgptapi.tls.certresolver=lets-encrypt"
+    #   - "traefik.http.routers.chatgptapi.entrypoints=websecure"
